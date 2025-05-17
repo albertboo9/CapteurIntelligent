@@ -1,0 +1,49 @@
+header{
+    position: sticky;
+    top:0px;
+    left: var(--aside-width);
+    display: flex;
+    flex-direction: row-reverse;
+    vertical-align: center;
+    height: 70px;
+    width: var(--width-big-contener);
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px rgb(228,230,231) solid;
+    background-color: var(--background-color);
+    z-index: 5000;
+    }
+    header> div{
+        display: flex;
+        align-items: center;
+    }
+    header .salutation{
+        font-size: 18px;
+    }
+    header .no-connect,header .yes-connect{
+        font-size: 32px;
+        margin-left: var(--padding-left-home);
+    }
+    header .no-connect{
+        color: var(--error-color) !important;
+    }
+    header .yes-connect{
+        color: var(--sucess-color) !important;
+    }
+    header .bxs-user-circle{
+        font-size: 40px;
+        margin: 0px 10px 0px 20px;
+    }
+
+@media screen and (max-width:600px){
+        header .no-connect,header .yes-connect{
+            display: none;
+        }
+}
+
+@media screen and (max-height:600px) {
+    .head-dashboard .head-info-dashboard{
+        margin-left: 0px;
+        }
+}
+    

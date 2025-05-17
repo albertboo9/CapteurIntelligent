@@ -1,0 +1,88 @@
+#logPage{
+    width: 100%;
+    height: 100%;
+    }
+    #logPage .main-image{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        filter: blur(8px);
+        opacity: 0.6;
+    }
+    #logPage .form{
+        width: 35%;
+        height: 70%;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 20px 10px;
+        z-index: 200;
+        border: #26B7FF 1px solid;
+        }
+        #logPage .form .head-form{
+            display: flex;
+            }
+            #logPage .form .head-form img{
+                width: 70px;
+                height: 70px;
+            }
+            #logPage .form .head-form h1{
+                color:var(--primary-color);
+                margin-left: 20px;
+                margin-bottom: 50px;
+            }
+        #logPage .form form{
+            width: 100%;
+            }
+            #logPage .form form button{
+                width: 50%;
+                height: 50px;
+                margin-top: 20px;
+                font-size: 30px;
+                color: white;
+                background-color: var(--primary-color);
+                cursor: pointer;
+                border-radius: 50px;
+                border: none;
+                transition-property: all;
+                transition-timing-function: ease-in-out;
+                transition-duration: 0.4s;
+                }
+                #logPage .form form button:hover{
+                    filter: brightness(0.6);
+                }
+        #logPage .form span{
+            color: var(--primary-color);
+            align-self: baseline;
+            cursor: pointer;
+            }
+            #logPage .form span:hover{
+                text-decoration: underline;
+            }
+@media screen and (max-width:600px){
+    #logPage .form{
+        width:95%;
+        border:none;
+        top: 10px;;
+        transform: translate(-50%,0%);
+    }
+}
+
+@media screen and (max-height:600px) {
+    #logPage .form{
+        width:95%;
+        border:none;
+        
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    #logPage .main-image{
+        filter: brightness(0.5);
+
+    }  
+}

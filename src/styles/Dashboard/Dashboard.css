@@ -1,0 +1,10 @@
+.dashboard .head-text{
+    color: gray;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+@media (prefers-color-scheme: dark){
+    .dashboard .head-text{
+        color: white;
+    }
+}

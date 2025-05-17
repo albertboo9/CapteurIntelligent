@@ -1,0 +1,28 @@
+:root{
+    --aside-width:200px;
+    --padding-left-home:20px;
+    --width-big-contener:calc(100% - var(--aside-width));
+    --phone-device:600px;
+}
+*,*::placeholder{
+    font-family: satoshi;
+}
+.colum-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    :root{
+        --aside-width:0px;
+        --width-big-contener:100%;
+    }
+}
+
+@media screen and (max-height:600px) {
+    :root{
+        --aside-width:0px;
+        --width-big-contener:100%;
+    }
+}
