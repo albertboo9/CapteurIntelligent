@@ -1,0 +1,23 @@
+/* J'ai créer le fichier si parce Log.css est un peu trop chargé*/
+
+@keyframes moveSignUp {
+    from{
+        opacity: 0.0;
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1.0;
+    }
+}
+
+@Keyframes moveSignIn {
+    from{
+        opacity: 0.0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity: 1.0;
+        transform: translateX(0%);
+    }
+}

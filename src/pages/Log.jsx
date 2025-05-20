@@ -2,28 +2,46 @@
 import "../styles/Log/Log.css";
 
 //importation de composant
-import Field from "../component/Log/Field";
+import SignUp from "../component/Log/SignUp";
+import SignIn from "../component/Log/SignIn";
 
 //importation de hook et images
 import background from "../asset/images/robot.webp"
 import logo from "../asset/images/Logo_sans_nom-removebg-preview.png"
 import { userVerif } from "../database/userVerif";
+import {useEffect, useState} from "react";
 
 function Log(){
-
-    const submit=(e)=>{
-        e.preventDefault()
-        const username=document.getElementById("username")
-        const password=document.getElementById("password")
-        userVerif(username.value,password.value,"http://localhost:8000")
-        .then(estReconnue=>{
-            console.log(estReconnue)
+    const [isSignUp,setIsSignUp]=useState(false)
+    useEffect(() => {
+        //Gestion de l'annimation de passage du sign in au sign up et visce versa
+        const goToSignUp=document.querySelector("form #goToSignUp")
+        const goToSignIn=document.querySelector("form #goToSignIn")
+        const formSignIn=document.querySelector("#formSignIn")
+        const formSignUp=document.querySelector("#formSignUp")
+        goToSignUp.addEventListener("click",()=>{
+            setIsSignUp(true)
+            formSignUp.style.animationName="moveSignUp"
+            formSignIn.style.animationName="none"
         })
-        .catch(erreur => {
-        console.error('Une erreur s\'est produite lors de la vérification:', erreur);
-        });
+        goToSignIn.addEventListener("click",()=>{
+            setIsSignUp(false)
+            formSignUp.style.animationName="none"
+            formSignIn.style.animationName="moveSignIn"
+        })
 
-    }
+        //rendre les password visible au survol
+        const password=document.querySelectorAll("form input[type=password]")
+        password.forEach(element => {
+            element.addEventListener("mouseover",()=>{
+                element.type="text"
+            })
+            element.addEventListener("mouseout",()=>{
+                element.type="password"
+            })
+        });
+    }, []);
+
     return <>
         <main id="logPage">
             <img src={background} className="main-image" alt="" />
@@ -33,20 +51,9 @@ function Log(){
                     <h1>Bienvenue sur All connect</h1>
                     
                 </div>
-                <form className="colum-div">
-                    <Field label="Username" classIco="bx bx-user" name="username" ></Field>
-                    <Field label="Password" classIco="bx bx-lock" name="password" ></Field>
-                    <span> Mot de passe oublié</span>
-                    
-                    <button type="submit" onClick={submit}>
-                        Connection 
-                    </button>
-                    <p>
-                        Pas de compte ?  Alors <span>Inscrivez-vous?</span>
-                    </p>
-                    
-                </form>
+                     <SignUp visibility={isSignUp}/>  <SignIn visibility={!isSignUp}/>
             </section>
+
         </main>
     </>
 }

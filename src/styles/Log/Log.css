@@ -12,7 +12,7 @@
     }
     #logPage .form{
         width: 35%;
-        height: 70%;
+        height: 75%;
         position: absolute;
         left: 50%;
         top:50%;
@@ -22,6 +22,7 @@
         padding: 20px 10px;
         z-index: 200;
         border: #26B7FF 1px solid;
+        overflow: hidden;
         }
         #logPage .form .head-form{
             display: flex;
@@ -37,6 +38,8 @@
             }
         #logPage .form form{
             width: 100%;
+            animation-duration: 0.7s;
+            animation-timing-function: ease-in-out;
             }
             #logPage .form form button{
                 width: 50%;
@@ -85,4 +88,26 @@
         filter: brightness(0.5);
 
     }  
+}
+
+@keyframes moveSignUp {
+    from{
+        opacity: 0.0;
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1.0;
+    }
+}
+
+@Keyframes moveSignIn {
+    from{
+        opacity: 0.0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1.0;
+        transform: translateX(0%);
+    }
 }

@@ -5,6 +5,12 @@
       "name": "Emmanuel",
       "username": "emmanuel",
       "password": "password"
+    },
+    {
+      "email": "emmanuelseujip@gmail.com",
+      "username": "albert",
+      "password": "password",
+      "id": 1
     }
   ],
   "connection": []

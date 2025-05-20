@@ -21,7 +21,7 @@ const sender = async (method, url, data = null) => {
     };
 
     const response = await axios(config);
-    return response.data; // Retourne uniquement les données de la réponse
+    return response; // Retourne uniquement les données de la réponse
   } catch (error) {
     console.error(`Erreur lors de la requête ${method.toUpperCase()} vers ${url}:`, error);
     throw error; // Propage l'erreur pour que l'appelant puisse la gérer
