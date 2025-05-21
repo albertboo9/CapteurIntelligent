@@ -1,0 +1,19 @@
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+}
+#home{
+    position: relative;
+    width: calc(100% - 250px);
+    margin-left: var(--aside-width);
+    margin-top: 30px;
+    padding-left: var(--padding-left-home);
+}
+
+@media screen and (max-width:600px) {
+    #home{
+        width: 100%;
+    }
+    
+}

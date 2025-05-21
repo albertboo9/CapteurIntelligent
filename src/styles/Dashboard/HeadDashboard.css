@@ -1,0 +1,81 @@
+.head-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .head-dashboard .action-dashboard{
+        display: flex;
+        flex-direction: column;
+        }
+        .head-dashboard .action-dashboard button{
+            font-size: 20px;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .head-dashboard .action-dashboard .yes-connect{
+            background-color: var(--sucess-color);
+        }
+        .head-dashboard .action-dashboard .no-connect{
+            background-color: var(--error-color);
+        }
+        .head-dashboard .action-dashboard .refresh-btn{
+            background-color: var(--primary-color);
+        }
+        .head-dashboard .action-dashboard button:hover{
+            filter: brightness(0.6);
+        }
+        .head-dashboard .action-dashboard button:active{
+            filter: blur(2px);
+        }
+    .head-dashboard .head-info-dashboard{
+        margin-left: 20px;
+        }
+        .head-dashboard .head-info-dashboard >div{
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .head-dashboard .head-info-dashboard .info-box{
+            display: flex;
+            flex-direction: column;
+            background-color: var(--second-background-color);
+            border-radius: 10px;
+            margin-right: 20px;
+            padding:10px 15px;
+            min-width: 100px;
+            }
+            .head-dashboard .head-info-dashboard .info-box .icon-info-box{
+                background-color: var(--primary-color);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            .head-dashboard .head-info-dashboard .info-box .yes-connect{
+                color: var(--sucess-color);
+            }
+            .head-dashboard .head-info-dashboard .info-box .no-connect{
+                color: var(--error-color);
+            }
+            .head-dashboard .head-info-dashboard .info-box .main-info{
+                font-size: 20px;
+            }
+@media screen and (max-width:600px){
+        .head-dashboard .head-info-dashboard {
+            margin-left: 0px;
+
+            }
+}
+
+@media screen and (max-height:600px) {
+    .head-dashboard .head-info-dashboard{
+        margin-left: 0px;
+        }
+}

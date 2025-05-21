@@ -1,0 +1,5 @@
+{
+  "port": 8000,
+  "routes": "routes.json",
+  "middlewares": ["../../cors-middleware.js"]
+}

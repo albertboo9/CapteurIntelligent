@@ -1,0 +1,50 @@
+.menu-phone> .bx{
+    font-size: 24px;
+    margin-left: 20px;
+
+}
+.menu-phone .menu-popup{
+    display: none !important;
+    position: absolute;
+    top:50px;
+    left: 20px;
+    padding: 10px 0px 10px 10px;
+    border-radius: 10px;
+    background-color: var(--second-background-color);
+    flex-direction: column;
+    align-items: end;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.3s;
+    animation-delay: 0.1s;
+    }
+    .menu-phone .menu-popup .nav-home{
+        display: flex;
+        align-self: flex-end;
+        height: 40px;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 10px;
+        border-radius: 20px 0px 0px 20px;
+        cursor: pointer;
+        width: 110px;
+        }
+    .menu-phone .menu-popup .actual-page{
+        background-color: var(--background-color);
+    }
+@media screen and (min-width:600px){
+    .menu-phone{
+        display: none;
+    }
+}
+
+@keyframes menu-annimation {
+    from{
+        opacity: 0.1;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1.0;
+        transform: translateY(0px);       
+    }
+}
+

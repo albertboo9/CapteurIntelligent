@@ -1,0 +1,36 @@
+.info-captor{
+    display: flex;
+    }
+    .info-captor img{
+        width: 500px;
+    }
+    .info-captor .name-captor{
+        font-size: 24px;
+    }
+    .info-captor p{
+        text-align: justify;
+    }
+
+@media screen and (max-width:600px){
+    .info-captor{
+        flex-wrap: wrap;
+        }
+        .info-captor img{
+            width: 100%;
+        }
+        .info-captor .main-info-tool{
+            width: 90%;
+        }
+}
+
+@media screen and (max-height:600px) {
+    .info-captor{
+        flex-wrap: wrap;
+        }
+        .info-captor img{
+            width: 100%;
+        }
+        .info-captor .main-info-tool{
+            width: 90%;
+        }
+}
