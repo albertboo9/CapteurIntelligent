@@ -33,6 +33,7 @@
             background-color: transparent;
             font-size: 20px;
             outline: none;
+            color: var(--text-color);
             }
 
         .field .for-user .iconic{

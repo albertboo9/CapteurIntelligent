@@ -41,7 +41,7 @@ header{
         }
 }
 
-@media screen and (max-height:600px) {
+@media screen and (max-width: 600px) and (orientation: landscape) {
     .head-dashboard .head-info-dashboard{
         margin-left: 0px;
         }

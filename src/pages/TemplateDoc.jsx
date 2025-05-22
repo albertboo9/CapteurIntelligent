@@ -22,8 +22,12 @@ function TemplateDoc({name,image,documentation,children}){
                 </div>
             </div>
         </div>
-        <h2>Mesure</h2>
-        {children}
+        {children? <>
+                <h2>Mesure</h2>
+                {children}
+            </>
+            :""}
+
     </section>
 }
 export default TemplateDoc

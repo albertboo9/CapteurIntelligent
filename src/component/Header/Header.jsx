@@ -3,7 +3,7 @@ import "../../styles/Header/Header.css"
 //Importation de composant
 import MenuPhone from "./MenuPhone";
 
-function Header({status=false,name="admin"}){
+function Header({status=false,name="admin",index=0}){
 
     return (<header>
         
@@ -17,7 +17,7 @@ function Header({status=false,name="admin"}){
         :
             <div className="yes-connect">You are connected</div>
         }
-        <MenuPhone/>
+        <MenuPhone index={index}/>
     </header>);
 }
 

@@ -8,9 +8,11 @@ import Dashboard from "../component/Dashboard/Dashboard";
 import AudioDoc from "../component/TemplateDoc/AudioDoc";
 import { useEffect, useState } from "react";
 import TemperatureDoc from "../component/TemplateDoc/TemperatureDoc";
+import PresenceDoc from "../component/TemplateDoc/PresenceDoc.jsx";
+import {useLocation} from "react-router-dom";
 
-function Home(){
-    const information={
+function Home({index=0}){
+   const information={
         status:true,
         numCaptor:4,
         time:10,
@@ -18,42 +20,17 @@ function Home(){
         noice:false,
         presence:false
     }
-    
-    const allIndex=[
-        {
-            id:"nav0",
-            index:0
-        },
-        {
-            id:"nav1",
-            index:1
-        },
-        {
-            id:"nav2",
-            index:2
-        },
-        {
-            id:"nav3",
-            index:3
-        }
-    ]
-    const [index,setIndex]=useState(0)
-    useEffect(()=>{
-        allIndex.forEach(element => {
-            let x=document.getElementById(element.id)
-            x.addEventListener("click",()=>{
-                setIndex(element.index)
-            })
-        });
-    },[])
-
     const allComponent=[
         <Dashboard information={information}/>,
         <TemperatureDoc/>,
-        <AudioDoc/>
+        <AudioDoc/>,
+        <PresenceDoc/>
     ]
+    const location=useLocation()
+    console.log(location)
+    const admin=location.state? location.state: {username:"admin"}
     return (<>
-        <Header status={true} />
+        <Header status={true} name={admin.username} index={index}/>
         <Aside index={index}/>
         <main id="home">
             {allComponent[index]}

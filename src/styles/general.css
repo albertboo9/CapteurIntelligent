@@ -1,3 +1,11 @@
+/* src/index.css */
+
+/*Importation de la police satoshi contenu dans le dossier front*/
+@font-face {
+    font-family: Satoshi-Regular;
+    src: url('../asset/font/Satoshi_Complete/Fonts/TTF/Satoshi-Variable.ttf');
+}
+
 :root{
     --aside-width:200px;
     --padding-left-home:20px;
@@ -5,8 +13,9 @@
     --phone-device:600px;
 }
 *,*::placeholder{
-    font-family: satoshi;
+    font-family: Satoshi-Regular;
 }
+
 .colum-div{
     display: flex;
     flex-direction: column;
@@ -20,7 +29,7 @@
     }
 }
 
-@media screen and (max-height:600px) {
+@media screen and (max-width: 600px) and (orientation: landscape) {
     :root{
         --aside-width:0px;
         --width-big-contener:100%;

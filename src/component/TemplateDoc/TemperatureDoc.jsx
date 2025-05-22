@@ -1,5 +1,6 @@
 import TemplateDoc from "../../pages/TemplateDoc";
 import audioImage from "../../asset/images/dht11-removebg-preview.png"
+import TemperatureVisualiser from "../Dashboard/TemperatureVisualiser.jsx";
 
 
 function TemperatureDoc(){
@@ -13,7 +14,7 @@ function TemperatureDoc(){
         image:audioImage
     }
     return <TemplateDoc name={information.name} image={information.image} documentation={information.documentation}>
-
+        <TemperatureVisualiser></TemperatureVisualiser>
     </TemplateDoc>
 }
 

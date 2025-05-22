@@ -4,7 +4,7 @@
 
 }
 .menu-phone .menu-popup{
-    display: none !important;
+    display: none;
     position: absolute;
     top:50px;
     left: 20px;
@@ -15,7 +15,6 @@
     align-items: end;
     animation-timing-function: ease-in-out;
     animation-duration: 0.3s;
-    animation-delay: 0.1s;
     }
     .menu-phone .menu-popup .nav-home{
         display: flex;
@@ -31,6 +30,28 @@
     .menu-phone .menu-popup .actual-page{
         background-color: var(--background-color);
     }
+    .menu-phone .log-out {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40px;
+    cursor: pointer;
+    color:white;
+    background-color: var(--error-color);
+    border-radius: 10px;
+    align-self: center;
+    font-size: 20px;
+    }
+    .menu-phone .log-out *:link{
+        text-decoration: none;
+        color: white !important;
+    }
+   .menu-phone .log-out *:visited{
+        text-decoration: none;
+        color: white !important;
+    }
+
 @media screen and (min-width:600px){
     .menu-phone{
         display: none;

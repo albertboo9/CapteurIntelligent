@@ -8,7 +8,7 @@ import Log from "./pages/Log";
 import Home from "./pages/Home";
 
 // Importation des hook et autre
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider,Outlet } from 'react-router-dom';
 
 function App() {
   const router = createBrowserRouter([
@@ -18,7 +18,19 @@ function App() {
     },
     {
       path: "/home", // Ajout du '/' pour la cohérence
-      element: <Home />
+      element: <Home index={0}/>,
+    },
+    {
+      path: "/temperature",
+      element:<Home index={1}/>,
+    },
+    {
+      path: "/sound",
+      element:<Home index={2}/>,
+    },
+    {
+      path: "/presence",
+      element:<Home index={3}/>,
     }
   ]);
 

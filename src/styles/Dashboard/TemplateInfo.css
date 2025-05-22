@@ -1,0 +1,37 @@
+.template-info{
+    width:300px;
+    background-color: var(--second-background-color);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .template-info>*{
+        margin-bottom: 5px;
+    }
+
+    .template-info>*:link{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    .template-info>*:visited{
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    .template-info .view-value{
+        background-color: var(--primary-color);
+        min-width: 100px;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+    }
+    .template-info .name-template{
+        font-size: 20px;
+    }
+    .template-info img{
+        width: 150px;
+        height: 150px;
+    }

@@ -3,6 +3,18 @@
     font-size: 24px;
     margin-bottom: 20px;
 }
+
+.dashboard .small-info-dashboard{
+    margin: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    }
+    .dashboard .small-info-dashboard>div{
+        margin-right: 20px;
+    }
+
 @media (prefers-color-scheme: dark){
     .dashboard .head-text{
         color: white;
